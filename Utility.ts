@@ -35,4 +35,8 @@ export class Utility {
   public static MinutesToMilliseconds(minutes: number) {
     return 1000 * 60 * minutes;
   }
+
+  public static SecondsToMilliseconds(seconds: number) {
+    return 1000 * seconds;
+  }
 }
