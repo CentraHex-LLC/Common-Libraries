@@ -32,6 +32,14 @@ export class Utility {
     await new Promise(r => setTimeout(r, duration));
   }
 
+  public static withDelay<T>(duration: number) {
+    const delay = this.sleep(duration);
+    return async (value: T) => {
+      await delay;
+      return value;
+    };
+  }
+
   public static MinutesToMilliseconds(minutes: number) {
     return 1000 * 60 * minutes;
   }
